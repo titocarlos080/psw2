@@ -38,7 +38,7 @@
     </div>
 
     <div class="col-xl-4 col-md-6">
-        <div class="card shadow mb-4">
+        <div class="card shadow mb-4"> 
             <div class="card-body rounded" style="background: #33ff99">
                 <div class="row align-items-center">
                     <div class="col-2">
