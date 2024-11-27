@@ -6,6 +6,10 @@
    <!-- Login Page -->
    <section class="py-5" style="background-color: #b8e6b3;"> <!-- Verde claro -->
    <head>
+
+    <script src="https://js.hcaptcha.com/1/api.js" async defer></script>
+
+
   <!-- Your code -->
 </head>
         <div class="container">
@@ -56,12 +60,11 @@
                                 {{ $message }}
                             </p>
                         @enderror
-                    
+
+                        <div class="h-captcha" data-sitekey="2e901190-250a-4e82-a98a-b1aa04a6971e"></div>
+
                         <!-- reCAPTCHA -->
-                        <div class="form-group">
-                            {!! NoCaptcha::renderJs() !!}
-                            {!! NoCaptcha::display() !!}
-                        </div>
+                      
                         
                         <!-- Debugging -->
                       
