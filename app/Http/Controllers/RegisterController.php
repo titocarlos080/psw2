@@ -30,6 +30,7 @@ class RegisterController extends Controller{
                 'name' => 'required|string|max:255',
                 'email' => 'required|email|unique:users,email',
                 'password' => 'required|confirmed',
+                'terms' => ['required', 'accepted'],  // Validación de los términos
             ]);
         
             // Transformar el valor de sexo a "f" o "m"

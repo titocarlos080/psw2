@@ -34,5 +34,9 @@ return [
     'credentials_path' => env('FIREBASE_CREDENTIALS_PATH', 'default/path/if/needed'),
                 ],
 
+    'recaptcha' => [
+        'sitekey' => env('RECAPTCHA_SITEKEY'),
+        'secret' => env('RECAPTCHA_SECRETKEY'),
+    ],
 
 ];

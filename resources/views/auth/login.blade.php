@@ -6,7 +6,6 @@
    <!-- Login Page -->
    <section class="py-5" style="background-color: #b8e6b3;"> <!-- Verde claro -->
    <head>
-  <script src="https://www.google.com/recaptcha/enterprise.js?render=6LfO2ogqAAAAADx2pAfLrA4nHnHEtlgUxGOXQiBr"></script>
   <!-- Your code -->
 </head>
         <div class="container">
@@ -52,6 +51,20 @@
                                 </p>
                             @enderror
 
+                            @error('g-recaptcha-response')
+                            <p class="alert alert-danger text-center">
+                                {{ $message }}
+                            </p>
+                        @enderror
+                    
+                        <!-- reCAPTCHA -->
+                        <div class="form-group">
+                            {!! NoCaptcha::renderJs() !!}
+                            {!! NoCaptcha::display() !!}
+                        </div>
+                        
+                        <!-- Debugging -->
+                      
                             <!-- Submit Button -->
                             <div class="d-grid mb-4">
                                 <button class="btn btn-primary btn-lg rounded-pill" type="submit">Iniciar Sesión</button>
@@ -69,14 +82,7 @@
                     </div>
                 </div>
             </div>
-            <script>
-  function onClick(e) {
-    e.preventDefault();
-    grecaptcha.enterprise.ready(async () => {
-      const token = await grecaptcha.enterprise.execute('6LfO2ogqAAAAADx2pAfLrA4nHnHEtlgUxGOXQiBr', {action: 'LOGIN'});
-    });
-  }
-</script>
+        
         </div>
     </div>
 </section>
