@@ -66,7 +66,7 @@
 
             try {
                 // Hacer solicitud POST hacia la API
-                const response = await fetch('https://b820-54-234-47-232.ngrok-free.app/analizar-imagen/', {
+                const response = await fetch('https://22cb-54-91-97-118.ngrok-free.app/analizar-imagen/', {
                     method: 'POST',
                     body: formData
                 });
