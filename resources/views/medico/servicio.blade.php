@@ -66,7 +66,7 @@
 
             try {
                 // Hacer solicitud POST hacia la API
-                const response = await fetch('http://44.212.25.161/analizar-imagen/', {
+                const response = await fetch('http://35.174.173.64/analizar-imagen/', {
                     method: 'POST',
                     body: formData
                 });
