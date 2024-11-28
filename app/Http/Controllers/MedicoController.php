@@ -104,6 +104,7 @@ class MedicoController extends Controller
         $user->nombre = $request->nombre;
         $user->a_paterno = $request->a_paterno;
         $user->a_materno = $request->a_materno;
+        $user->especialidad = $request->especialidad;
         $user->sexo = $request->sexo;
         $user->telefono = $request->telefono;
         $user->direccion = $request->direccion;
