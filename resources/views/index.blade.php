@@ -63,7 +63,16 @@
     </div>
 @endif
 
-
+<!-- Cuadro con enlace de descarga -->
+<section class="bg-light py-4">
+    <div class="container text-center">
+        <h2 class="mb-3">Descarga nuestra App</h2>
+        <p class="mb-4">Accede a todos nuestros servicios desde la comodidad de tu dispositivo móvil.</p>
+        <a href="https://drive.google.com/drive/folders/13JCj-3refuN8LmZHRVecnOuGyB8Xf8-g?usp=sharing" class="btn btn-primary btn-lg" target="_blank">
+            Descargar desde Google Drive
+        </a>
+    </div>
+</section>
 
 <!-- Calendar Section -->
 <section class="py-5">
