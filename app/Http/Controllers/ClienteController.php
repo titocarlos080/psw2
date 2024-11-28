@@ -17,7 +17,7 @@ class ClienteController extends Controller
 
     /*Manda al view clienteRegister */
     public function ListarC(){
-        $user = cliente::all();
+        $user = Cliente::all();
         return view('cliente.ClienteRegister', compact('user'));
         
     }
@@ -40,7 +40,7 @@ class ClienteController extends Controller
                                                    'direccion'=>'required']);
 
 
-        $user = cliente::create(request(['ci','nombre','a_paterno','a_materno','sexo','telefono','direccion']));
+        $user = Cliente::create(request(['ci','nombre','a_paterno','a_materno','sexo','telefono','direccion']));
         $user->estado='h';
        
         
@@ -54,7 +54,7 @@ class ClienteController extends Controller
     /*////// Elimina a un cliente //// */
 
     public function destroyCliente($id, Request $request){
-        $user = cliente::find($id);
+        $user = Cliente::find($id);
         $user->delete();
     
         return redirect()->route('admin.listarcliente');
@@ -63,13 +63,13 @@ class ClienteController extends Controller
     /*///// Edita un cliente////// */
 
     public function editCliente($id){
-        $user = cliente::find($id);
+        $user = Cliente::find($id);
         return view('cliente.editarCliente',compact('user'));
     }
 
     /* cambia los datos al editar presionando el button */
     public function updateCliente(Request $request, $id){
-        $user = cliente::find($id);
+        $user = Cliente::find($id);
         $user->ci = $request->ci;
         $user->nombre = $request->nombre;
         $user->a_paterno = $request->a_paterno;
