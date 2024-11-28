@@ -4,7 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Models\bitacora;
 use Illuminate\Http\Request;
-use App\Models\cliente;
+use App\Models\Ccliente;
 use PDF;
 // tiene que ser inportado
 
